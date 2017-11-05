@@ -198,3 +198,19 @@ function moveCheck(pos)
     return true;
   }
 }
+
+function finished()
+{
+  var finish = true;
+  for (var q = 0; q < pieces.length; q++)
+  {
+    var y = parseInt(pieces[q].style.top);
+    var x = parseInt(pieces[q].style.left);
+    if (x != (q%4*100) || y != parseInt(q/4)*100)
+    {
+      finish = false;
+      break;
+    }
+  }
+  return finish;
+}
