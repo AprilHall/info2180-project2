@@ -176,7 +176,28 @@ function moveDown(x, y)
   }
 }
 
+function moveCheck(pos)
+{
+  if (moveLeft(posX, posY) == (pos-1))
+  {
+    return true;
+  }
 
+  if (moveDown(posX, posY) == (pos-1))
+  {
+    return true;
+  }
+
+  if (moveUp(posX, posY) == (pos-1))
+  {
+    return true;
+  }
+
+  if (moveRight(posX, posY) == (pos-1))
+  {
+    return true;
+  }
+}
 
 function finished()
 {
